@@ -12,4 +12,24 @@
     tools:context="ca.blake.georgian.dollify.dollify.instructionsActivity"
     tools:showIn="@layout/activity_instructions">
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/instructionTitleText"
+        android:id="@+id/textView"
+        android:layout_marginTop="58dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:textSize="@dimen/titleTextSize" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Instructions Go Here!!"
+        android:id="@+id/textView2"
+        android:layout_below="@+id/textView"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="62dp"
+        android:textSize="@dimen/instructionsTextSize" />
+
 </RelativeLayout>

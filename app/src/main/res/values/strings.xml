@@ -7,4 +7,6 @@
     <string name="quitButtonText">Quit</string>
     <string name="title_activity_instructions">Instructions</string>
     <string name="title_activity_start">Dollify - Play</string>
+    <string name="instructionTitleText">Instructions</string>
+    <string name="backButtonText">Back</string>
 </resources>
