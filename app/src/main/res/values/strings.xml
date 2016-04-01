@@ -5,4 +5,6 @@
     <string name="instructionsButtonText">Instructions</string>
     <string name="startButtonText">Start</string>
     <string name="quitButtonText">Quit</string>
+    <string name="title_activity_instructions">Instructions</string>
+    <string name="title_activity_start">Dollify - Play</string>
 </resources>
