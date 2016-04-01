@@ -1,4 +1,8 @@
 <resources>
     <string name="app_name">Dollify</string>
     <string name="action_settings">Settings</string>
+    <string name="titleString">Dollify</string>
+    <string name="instructionsButtonText">Instructions</string>
+    <string name="startButtonText">Start</string>
+    <string name="quitButtonText">Quit</string>
 </resources>
