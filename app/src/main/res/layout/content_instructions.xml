@@ -10,13 +10,14 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context="ca.blake.georgian.dollify.dollify.instructionsActivity"
-    tools:showIn="@layout/activity_instructions">
+    tools:showIn="@layout/activity_instructions"
+    android:id="@+id/instructionsRelativeLayout">
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/instructionTitleText"
-        android:id="@+id/textView"
+        android:id="@+id/instructionsTitleTextView"
         android:layout_marginTop="58dp"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
@@ -26,8 +27,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Instructions Go Here!!"
-        android:id="@+id/textView2"
-        android:layout_below="@+id/textView"
+        android:id="@+id/instructionsBodyTextView"
+        android:layout_below="@+id/instructionsTitleTextView"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="62dp"
         android:textSize="@dimen/instructionsTextSize" />
