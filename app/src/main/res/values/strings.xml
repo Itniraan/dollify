@@ -10,4 +10,7 @@
     <string name="instructionTitleText">Instructions</string>
     <string name="backButtonText">Back</string>
     <string name="title_activity_splash_screen">Splash Screen</string>
+    <string name="nextButtonString">Next</string>
+    <string name="leftArrowButtonText"><![CDATA[<-]]></string>
+    <string name="rightArrowButtonText"><![CDATA[->]]></string>
 </resources>

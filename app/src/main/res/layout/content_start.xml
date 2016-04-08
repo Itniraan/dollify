@@ -13,4 +13,110 @@
     tools:showIn="@layout/activity_start"
     android:id="@+id/startRelativeLayout">
 
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/bodyImageView"
+        android:layout_alignParentStart="true"
+        android:id="@+id/bodyBackgroundFrameLayout">
+
+        <ImageView
+            android:layout_width="@dimen/imageWidth"
+            android:layout_height="wrap_content"
+            android:id="@+id/bodyImageView"
+            android:layout_below="@+id/nextButton"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/body02"
+            android:scaleType="matrix"
+            android:layout_gravity="center" />
+
+    </FrameLayout>
+
+    <Button
+        android:layout_width="@dimen/buttonStartWidth"
+        android:layout_height="@dimen/buttonStartHeight"
+        android:text="@string/leftArrowButtonText"
+        android:id="@+id/leftArrowButton1"
+        android:singleLine="false"
+        android:layout_above="@+id/leftArrowButton2"
+        android:layout_marginBottom="39dp" />
+
+    <ImageView
+        android:layout_width="@dimen/imageWidth"
+        android:layout_height="wrap_content"
+        android:id="@+id/topImageView"
+        android:src="@drawable/beanie04"
+        android:scaleType="matrix"
+        android:layout_alignTop="@+id/middleImageView"
+        android:layout_alignStart="@+id/middleImageView" />
+
+    <Button
+        android:layout_width="@dimen/buttonStartWidth"
+        android:layout_height="@dimen/buttonStartHeight"
+        android:text="@string/rightArrowButtonText"
+        android:id="@+id/rightArrowButton1"
+        android:layout_alignTop="@+id/leftArrowButton1"
+        android:layout_alignStart="@id/nextButton"
+        android:layout_marginLeft="@dimen/leftMargin" />
+
+    <Button
+        android:layout_width="@dimen/buttonStartWidth"
+        android:layout_height="@dimen/buttonStartHeight"
+        android:text="@string/leftArrowButtonText"
+        android:id="@+id/leftArrowButton2"
+        android:layout_alignTop="@+id/rightArrowButton2" />
+
+    <ImageView
+        android:layout_width="@dimen/imageWidth"
+        android:layout_height="wrap_content"
+        android:id="@+id/middleImageView"
+        android:src="@drawable/tank04"
+        android:scaleType="matrix"
+        android:layout_alignTop="@+id/bottomImageView"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:layout_width="@dimen/buttonStartWidth"
+        android:layout_height="@dimen/buttonStartHeight"
+        android:text="@string/rightArrowButtonText"
+        android:id="@+id/rightArrowButton2"
+        android:layout_above="@+id/rightArrowButton3"
+        android:layout_alignStart="@id/nextButton"
+        android:layout_marginLeft="@dimen/leftMargin" />
+
+    <Button
+        android:layout_width="@dimen/buttonStartWidth"
+        android:layout_height="@dimen/buttonStartHeight"
+        android:text="@string/leftArrowButtonText"
+        android:id="@+id/leftArrowButton3"
+        android:layout_alignTop="@+id/rightArrowButton3" />
+
+    <ImageView
+        android:layout_width="@dimen/imageWidth"
+        android:layout_height="wrap_content"
+        android:id="@+id/bottomImageView"
+        android:src="@drawable/boxers05"
+        android:scaleType="matrix"
+        android:layout_centerVertical="true"
+        android:layout_alignStart="@id/middleImageView" />
+
+    <Button
+        android:layout_width="@dimen/buttonStartWidth"
+        android:layout_height="@dimen/buttonStartHeight"
+        android:text="@string/rightArrowButtonText"
+        android:id="@+id/rightArrowButton3"
+        android:layout_gravity="right|center_vertical"
+        android:layout_marginBottom="52dp"
+        android:layout_alignBottom="@+id/topImageView"
+        android:layout_alignStart="@+id/nextButton"
+        android:layout_marginLeft="@dimen/leftMargin" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/nextButtonString"
+        android:id="@+id/nextButton"
+        android:layout_below="@+id/topImageView"
+        android:layout_alignParentEnd="true" />
+
 </RelativeLayout>
