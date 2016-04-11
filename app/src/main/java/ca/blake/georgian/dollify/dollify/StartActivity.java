@@ -23,12 +23,34 @@ public class StartActivity extends AppCompatActivity {
     private ImageView _middleImage;
     private ImageView _bottomImage;
 
-    private static final int TOP_LIMIT = 2, MIDDLE_LIMIT = 2, BOTTOM_LIMIT = 2;
+    // Constant variables with upper limit of each item
+    private static final int TOP_LIMIT = 42, MIDDLE_LIMIT = 38, BOTTOM_LIMIT = 31;
 
-    // Arrays of Drawables
-    private int[] topList = new int[]{R.drawable.ballc03, R.drawable.beanie04};
-    private int[] middleList = new int[]{R.drawable.tank03, R.drawable.tank04};
-    private int[] bottomList = new int[]{R.drawable.boxers03, R.drawable.boxers05};
+    // Arrays of Drawables for each section
+    private int[] topList = new int[]{R.drawable.ballc01, R.drawable.ballc02, R.drawable.ballc03, R.drawable.ballc04,
+            R.drawable.ballc05, R.drawable.ballc06, R.drawable.ballc07, R.drawable.beanie01, R.drawable.beanie02,
+            R.drawable.beanie03, R.drawable.beanie04, R.drawable.beanie05, R.drawable.beanie06, R.drawable.beanie07,
+            R.drawable.pigtails01, R.drawable.pigtails02, R.drawable.pigtails03, R.drawable.pigtails04, R.drawable.pigtails05,
+            R.drawable.pigtails06, R.drawable.pigtails07, R.drawable.prin01, R.drawable.prin02, R.drawable.prin03, R.drawable.prin04,
+            R.drawable.prin05, R.drawable.prin06, R.drawable.prin07, R.drawable.short01, R.drawable.short02, R.drawable.short03,
+            R.drawable.short04, R.drawable.short05, R.drawable.short06, R.drawable.short07, R.drawable.tom01, R.drawable.tom02,
+            R.drawable.tom03, R.drawable.tom04, R.drawable.tom05, R.drawable.tom06, R.drawable.tom07};
+    private int[] middleList = new int[]{R.drawable.hoodie01, R.drawable.hoodie02, R.drawable.hoodie03,
+            R.drawable.hoodie04, R.drawable.hoodie05, R.drawable.hoodie06, R.drawable.longsweater01,
+            R.drawable.longsweater02, R.drawable.longsweater03, R.drawable.longsweater04, R.drawable.longsweater05,
+            R.drawable.opensweater01, R.drawable.opensweater02, R.drawable.opensweater03, R.drawable.opensweater04,
+            R.drawable.opensweater05, R.drawable.polo01, R.drawable.polo02, R.drawable.polo03,
+            R.drawable.polo04, R.drawable.polo05, R.drawable.polo06, R.drawable.stripped01, R.drawable.stripped02,
+            R.drawable.stripped03, R.drawable.stripped04, R.drawable.stripped05, R.drawable.stripped06, R.drawable.tank01,
+            R.drawable.tank02, R.drawable.tank03, R.drawable.tank04, R.drawable.tank05, R.drawable.vest01, R.drawable.vest02,
+            R.drawable.vest03, R.drawable.vest04, R.drawable.vest05};
+    private int[] bottomList = new int[]{R.drawable.boxers, R.drawable.boxers02, R.drawable.boxers03, R.drawable.boxers04,
+            R.drawable.boxers05, R.drawable.boxers06, R.drawable.capri01, R.drawable.capri02, R.drawable.capri03,
+            R.drawable.capri04, R.drawable.capri05, R.drawable.jeans01, R.drawable.jeans02, R.drawable.jeans03,
+            R.drawable.jeans04, R.drawable.jeans05, R.drawable.shorts01, R.drawable.shorts02, R.drawable.shorts03,
+            R.drawable.shorts04, R.drawable.shorts05, R.drawable.skirt01, R.drawable.skirt02, R.drawable.skirt03,
+            R.drawable.skirt04, R.drawable.skirt05, R.drawable.tights01, R.drawable.tights02, R.drawable.tights03,
+            R.drawable.tights04, R.drawable.tights05};
 
     private int top = 0, middle = 0, bottom = 0;
 
