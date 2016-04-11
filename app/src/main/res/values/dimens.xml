@@ -16,4 +16,5 @@
     <dimen name="buttonTopMargin">20dp</dimen>
     <dimen name="leftMargin">30dp</dimen>
     <dimen name="instructionTextTopMargin">25dp</dimen>
+    <dimen name="aboutUsTextSize">30sp</dimen>
 </resources>
