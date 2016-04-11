@@ -94,7 +94,7 @@ public class StartActivity extends AppCompatActivity {
         _rightButton01.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if (top == TOP_LIMIT) {
+                if (top == TOP_LIMIT - 1) {
                     _topImage.setImageResource(topList[0]);
                     top = 0;
                     System.out.println(top);
@@ -126,7 +126,7 @@ public class StartActivity extends AppCompatActivity {
         _rightButton02.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if (middle == MIDDLE_LIMIT) {
+                if (middle == MIDDLE_LIMIT - 1) {
                     _middleImage.setImageResource(middleList[0]);
                     middle = 0;
                 } else {
@@ -154,7 +154,7 @@ public class StartActivity extends AppCompatActivity {
         _rightButton03.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if (bottom == BOTTOM_LIMIT) {
+                if (bottom == BOTTOM_LIMIT - 1) {
                     _bottomImage.setImageResource(bottomList[0]);
                     bottom = 0;
                 } else {
@@ -186,8 +186,6 @@ public class StartActivity extends AppCompatActivity {
         int[] set = new int[] {topList[top], middleList[middle], bottomList[bottom]};
         Intent openFinishIntent = new Intent(StartActivity.this, FinishActivity.class);
         openFinishIntent.putExtra("PIECES", set);
-        //openFinishIntent.putExtra("MIDDLE_PART", middleList[middle]);
-        //openFinishIntent.putExtra("BOTTOM_PART", bottomList[bottom]);
         startActivity(openFinishIntent);
         finish();
     }

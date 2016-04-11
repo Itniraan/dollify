@@ -69,11 +69,11 @@
     <ImageView
         android:layout_width="@dimen/imageWidth"
         android:layout_height="wrap_content"
-        android:id="@+id/middleImageFinish"
-        android:src="@drawable/tank04"
+        android:id="@+id/bottomImageFinish"
+        android:src="@drawable/boxers05"
         android:scaleType="matrix"
-        android:layout_alignTop="@+id/bottomImageFinish"
-        android:layout_centerHorizontal="true" />
+        android:layout_centerVertical="true"
+        android:layout_alignStart="@id/middleImageFinish" />
 
     <Button
         android:layout_width="@dimen/buttonStartWidth"
@@ -94,11 +94,11 @@
     <ImageView
         android:layout_width="@dimen/imageWidth"
         android:layout_height="wrap_content"
-        android:id="@+id/bottomImageFinish"
-        android:src="@drawable/boxers05"
+        android:id="@+id/middleImageFinish"
+        android:src="@drawable/tank04"
         android:scaleType="matrix"
-        android:layout_centerVertical="true"
-        android:layout_alignStart="@id/middleImageFinish" />
+        android:layout_alignTop="@+id/bottomImageFinish"
+        android:layout_centerHorizontal="true" />
 
     <Button
         android:layout_width="@dimen/buttonStartWidth"
