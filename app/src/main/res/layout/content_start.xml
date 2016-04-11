@@ -44,11 +44,11 @@
     <ImageView
         android:layout_width="@dimen/imageWidth"
         android:layout_height="wrap_content"
-        android:id="@+id/topImageView"
+        android:id="@+id/topImageFinish"
         android:src="@drawable/beanie04"
         android:scaleType="matrix"
-        android:layout_alignTop="@+id/middleImageView"
-        android:layout_alignStart="@+id/middleImageView" />
+        android:layout_alignTop="@+id/middleImageFinish"
+        android:layout_alignStart="@+id/middleImageFinish" />
 
     <Button
         android:layout_width="@dimen/buttonStartWidth"
@@ -69,10 +69,10 @@
     <ImageView
         android:layout_width="@dimen/imageWidth"
         android:layout_height="wrap_content"
-        android:id="@+id/middleImageView"
+        android:id="@+id/middleImageFinish"
         android:src="@drawable/tank04"
         android:scaleType="matrix"
-        android:layout_alignTop="@+id/bottomImageView"
+        android:layout_alignTop="@+id/bottomImageFinish"
         android:layout_centerHorizontal="true" />
 
     <Button
@@ -94,11 +94,11 @@
     <ImageView
         android:layout_width="@dimen/imageWidth"
         android:layout_height="wrap_content"
-        android:id="@+id/bottomImageView"
+        android:id="@+id/bottomImageFinish"
         android:src="@drawable/boxers05"
         android:scaleType="matrix"
         android:layout_centerVertical="true"
-        android:layout_alignStart="@id/middleImageView" />
+        android:layout_alignStart="@id/middleImageFinish" />
 
     <Button
         android:layout_width="@dimen/buttonStartWidth"
@@ -107,7 +107,7 @@
         android:id="@+id/rightArrowButton3"
         android:layout_gravity="right|center_vertical"
         android:layout_marginBottom="52dp"
-        android:layout_alignBottom="@+id/topImageView"
+        android:layout_alignBottom="@+id/topImageFinish"
         android:layout_alignStart="@+id/nextButton"
         android:layout_marginLeft="@dimen/leftMargin" />
 
@@ -116,7 +116,7 @@
         android:layout_height="wrap_content"
         android:text="@string/nextButtonString"
         android:id="@+id/nextButton"
-        android:layout_below="@+id/topImageView"
+        android:layout_below="@+id/topImageFinish"
         android:layout_alignParentEnd="true" />
 
 </RelativeLayout>

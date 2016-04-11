@@ -7,10 +7,18 @@
     <string name="quitButtonText">Quit</string>
     <string name="title_activity_instructions">Instructions</string>
     <string name="title_activity_start">Dollify - Play</string>
-    <string name="instructionTitleText">Instructions</string>
+    <string name="instructionTitleText">How to Dress Your Doll</string>
     <string name="backButtonText">Back</string>
     <string name="title_activity_splash_screen">Splash Screen</string>
     <string name="nextButtonString">Next</string>
     <string name="leftArrowButtonText"><![CDATA[<-]]></string>
     <string name="rightArrowButtonText"><![CDATA[->]]></string>
+    <string name="instructionText01">01) Press the arrow buttons to see all of the picture choices for the top, middle, and bottom of your doll</string>
+    <string name="instructionText02">02) When you see a picture you like, press on it!</string>
+    <string name="instructionText03">03) You will then be able to press on one of the colour buttons to change the colour!</string>
+    <string name="instructionText04">04) When you\'re finished dressing your doll, press the \'NEXT\' button.  You will see the picture of your dressed doll!</string>
+    <string name="instructionText05">05) You can save your picture by pressing the \'SAVE IMAGE\' button.</string>
+    <string name="instructionText06">06) You can dress your doll again by pressing the \'RESET\' button.</string>
+    <string name="instructionText07">07) Have FUN!</string>
+    <string name="title_activity_finish">FinishActivity</string>
 </resources>

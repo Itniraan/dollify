@@ -1,5 +1,6 @@
 package ca.blake.georgian.dollify.dollify;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -68,9 +69,12 @@ public class StartActivity extends AppCompatActivity {
         this._rightButton03 = (Button) findViewById(R.id.rightArrowButton3);
         this._nextButton = (Button) findViewById(R.id.nextButton);
 
-        this._topImage = (ImageView) findViewById(R.id.topImageView);
-        this._middleImage = (ImageView) findViewById(R.id.middleImageView);
-        this._bottomImage = (ImageView) findViewById(R.id.bottomImageView);
+        this._topImage = (ImageView) findViewById(R.id.topImageFinish);
+        this._middleImage = (ImageView) findViewById(R.id.middleImageFinish);
+        this._bottomImage = (ImageView) findViewById(R.id.bottomImageFinish);
+        _topImage.setImageResource(topList[0]);
+        _middleImage.setImageResource(middleList[0]);
+        _bottomImage.setImageResource(bottomList[0]);
 
 
         _leftButton01.setOnClickListener(new View.OnClickListener() {
@@ -80,8 +84,9 @@ public class StartActivity extends AppCompatActivity {
                     _topImage.setImageResource(topList[topList.length - 1]);
                     top = topList.length - 1;
                 } else {
-                    _topImage.setImageResource(topList[top - 1]);
                     top--;
+                    _topImage.setImageResource(topList[top - 1]);
+
                 }
             }
         });
@@ -97,8 +102,9 @@ public class StartActivity extends AppCompatActivity {
                     if (top == 0) {
                         top = 1;
                     }
-                    _topImage.setImageResource(topList[top]);
                     top++;
+                    _topImage.setImageResource(topList[top]);
+
                 }
             }
         });
@@ -110,8 +116,9 @@ public class StartActivity extends AppCompatActivity {
                     _middleImage.setImageResource(middleList[middleList.length - 1]);
                     middle = middleList.length - 1;
                 } else {
-                    _middleImage.setImageResource(middleList[middle - 1]);
                     middle--;
+                    _middleImage.setImageResource(middleList[middle - 1]);
+
                 }
             }
         });
@@ -123,8 +130,9 @@ public class StartActivity extends AppCompatActivity {
                     _middleImage.setImageResource(middleList[0]);
                     middle = 0;
                 } else {
-                    _middleImage.setImageResource(middleList[middle]);
                     middle++;
+                    _middleImage.setImageResource(middleList[middle]);
+
                 }
             }
         });
@@ -136,8 +144,9 @@ public class StartActivity extends AppCompatActivity {
                     _bottomImage.setImageResource(bottomList[bottomList.length - 1]);
                     bottom = bottomList.length - 1;
                 } else {
-                    _bottomImage.setImageResource(bottomList[bottom - 1]);
                     bottom--;
+                    _bottomImage.setImageResource(bottomList[bottom - 1]);
+
                 }
             }
         });
@@ -149,9 +158,17 @@ public class StartActivity extends AppCompatActivity {
                     _bottomImage.setImageResource(bottomList[0]);
                     bottom = 0;
                 } else {
-                    _bottomImage.setImageResource(bottomList[bottom]);
                     bottom++;
+                    _bottomImage.setImageResource(bottomList[bottom]);
+
                 }
+            }
+        });
+
+        _nextButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                OpenFinishScreen();
             }
         });
 
@@ -163,6 +180,18 @@ public class StartActivity extends AppCompatActivity {
                         .setAction("Action", null).show();
             }
         });
+    }
+
+    public void OpenFinishScreen() {
+        int[] set = new int[] {topList[top], middleList[middle], bottomList[bottom]};
+        System.out.println(set[0]);
+        System.out.println(set[1]);
+        System.out.println(set[2]);
+        Intent openFinishIntent = new Intent(StartActivity.this, FinishActivity.class);
+        openFinishIntent.putExtra("PIECES", set);
+        //openFinishIntent.putExtra("MIDDLE_PART", middleList[middle]);
+        //openFinishIntent.putExtra("BOTTOM_PART", bottomList[bottom]);
+        startActivity(openFinishIntent);
     }
 
 }

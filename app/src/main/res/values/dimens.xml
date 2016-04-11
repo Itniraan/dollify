@@ -4,10 +4,10 @@
     <dimen name="activity_vertical_margin">16dp</dimen>
     <dimen name="fab_margin">16dp</dimen>
     <dimen name="titleWidth">120sp</dimen>
-    <dimen name="titleTextSize">40sp</dimen>
+    <dimen name="titleTextSize">30sp</dimen>
     <dimen name="titleHeight">50sp</dimen>
     <dimen name="buttonTextSize">20sp</dimen>
-    <dimen name="instructionsTextSize">20sp</dimen>
+    <dimen name="instructionsTextSize">15sp</dimen>
     <dimen name="horizontalImageLayoutHeight">180dp</dimen>
     <dimen name="horizontalImageLayoutWidth">300dp</dimen>
     <dimen name="buttonStartWidth">60dp</dimen>
@@ -15,4 +15,5 @@
     <dimen name="imageWidth">230dp</dimen>
     <dimen name="buttonTopMargin">20dp</dimen>
     <dimen name="leftMargin">30dp</dimen>
+    <dimen name="instructionTextTopMargin">25dp</dimen>
 </resources>
