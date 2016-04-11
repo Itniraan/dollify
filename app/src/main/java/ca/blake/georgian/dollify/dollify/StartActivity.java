@@ -184,14 +184,12 @@ public class StartActivity extends AppCompatActivity {
 
     public void OpenFinishScreen() {
         int[] set = new int[] {topList[top], middleList[middle], bottomList[bottom]};
-        System.out.println(set[0]);
-        System.out.println(set[1]);
-        System.out.println(set[2]);
         Intent openFinishIntent = new Intent(StartActivity.this, FinishActivity.class);
         openFinishIntent.putExtra("PIECES", set);
         //openFinishIntent.putExtra("MIDDLE_PART", middleList[middle]);
         //openFinishIntent.putExtra("BOTTOM_PART", bottomList[bottom]);
         startActivity(openFinishIntent);
+        finish();
     }
 
 }

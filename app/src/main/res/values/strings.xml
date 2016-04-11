@@ -21,4 +21,6 @@
     <string name="instructionText06">06) You can dress your doll again by pressing the \'RESET\' button.</string>
     <string name="instructionText07">07) Have FUN!</string>
     <string name="title_activity_finish">FinishActivity</string>
+    <string name="saveImageButtonText">SAVE IMAGE</string>
+    <string name="resetButtonText">RESET</string>
 </resources>
