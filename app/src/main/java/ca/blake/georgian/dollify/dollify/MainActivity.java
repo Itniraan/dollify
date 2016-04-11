@@ -16,7 +16,6 @@ public class MainActivity extends AppCompatActivity {
 
     private Button _startButton;
     private Button _instructionsButton;
-    private Button _quitButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,7 +25,6 @@ public class MainActivity extends AppCompatActivity {
         // Create references for Button controls
         this._startButton = (Button) findViewById(R.id.startButton);
         this._instructionsButton = (Button) findViewById(R.id.instructionsButton);
-        this._quitButton = (Button) findViewById(R.id.quitButton);
 
         _startButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -39,13 +37,6 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 OpenInstructionsScreen();
-            }
-        });
-
-        _quitButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                System.exit(0);
             }
         });
 

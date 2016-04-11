@@ -13,28 +13,24 @@
     tools:showIn="@layout/activity_main"
     android:id="@+id/mainMenuRelativeLayout">
 
-    <TextView
+    <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/titleString"
-        android:layout_marginTop="58dp"
-        android:singleLine="false"
-        android:width="@dimen/titleWidth"
-        android:height="@dimen/titleHeight"
-        android:textSize="@dimen/titleTextSize"
+        android:id="@+id/titleImageView"
+        android:longClickable="false"
+        android:src="@drawable/logo"
         android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:id="@+id/titleTextBox" />
+        android:layout_alignParentStart="true" />
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/instructionsButtonText"
         android:id="@+id/instructionsButton"
-        android:layout_below="@+id/titleTextBox"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="46dp"
-        android:textSize="@dimen/buttonTextSize" />
+        android:textSize="@dimen/buttonTextSize"
+        android:layout_marginTop="47dp"
+        android:layout_below="@+id/startButton"
+        android:layout_centerHorizontal="true" />
 
     <Button
         android:layout_width="wrap_content"
@@ -45,13 +41,4 @@
         android:layout_centerVertical="true"
         android:layout_centerHorizontal="true" />
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/quitButtonText"
-        android:id="@+id/quitButton"
-        android:layout_marginTop="48dp"
-        android:textSize="@dimen/buttonTextSize"
-        android:layout_below="@+id/startButton"
-        android:layout_alignStart="@+id/startButton" />
 </RelativeLayout>
