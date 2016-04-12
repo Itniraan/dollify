@@ -27,8 +27,8 @@
     <string name="optionsTitleText">Options</string>
     <string name="aboutUsButtonText">About Us</string>
     <string name="title_activity_about_us">AboutUsActivity</string>
-    <string name="aboutUsTitleText">About Us</string>
-    <string name="aboutUsDescriptionText">Text Will Go Here</string>
+    <string name="aboutUsTitleText">Credits</string>
+    <string name="aboutUsDescriptionText">By Blake Murdock, Kelly McAlpine, and Jacqueline Richard</string>
     <string name="saveCompleteText">Image Saved! Please press \'RESET\' to make a new doll!</string>
     <string name="skinColourText">SKIN COLOUR</string>
 </resources>
