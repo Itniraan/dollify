@@ -20,10 +20,13 @@ public class OptionActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_option);
+
         // Create references for Button controls
-        this._instructionsButton = (Button) findViewById(R.id.instructionsButton);
+        this._instructionsButton = (Button) findViewById(R.id.optionsInstructionsButton);
         this._aboutUsButton = (Button) findViewById(R.id.aboutUsButton);
-        this._backButton = (Button) findViewById(R.id.backButton);
+        this._backButton = (Button) findViewById(R.id.optionsBackButton);
 
         _instructionsButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -44,11 +47,9 @@ public class OptionActivity extends AppCompatActivity {
         _backButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                onBackPressed();
             }
         });
-
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_option);
 
 
     }

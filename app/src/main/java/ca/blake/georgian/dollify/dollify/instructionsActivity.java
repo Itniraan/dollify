@@ -16,26 +16,19 @@ public class instructionsActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_instructions);
 
         this._backButton = (Button) findViewById(R.id.backButton);
 
-        //This doesn't work yet
+
         _backButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                finish();
+                onBackPressed();
             }
         });
 
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_instructions);
-
-    }
-
-    public void OpenPreviousScreen() {
-        Intent openPreviousIntent = new Intent(instructionsActivity.this, StartActivity.class);
-        startActivity(openPreviousIntent);
 
     }
 
