@@ -15,19 +15,23 @@ public class StartActivity extends AppCompatActivity {
     private Button _leftButton01;
     private Button _leftButton02;
     private Button _leftButton03;
+    private Button _leftButton04;
     private Button _rightButton01;
     private Button _rightButton02;
     private Button _rightButton03;
+    private Button _rightButton04;
     private Button _nextButton;
 
     private ImageView _topImage;
     private ImageView _middleImage;
     private ImageView _bottomImage;
+    private ImageView _bodyImage;
 
     // Constant variables with upper limit of each item
-    private static final int TOP_LIMIT = 42, MIDDLE_LIMIT = 38, BOTTOM_LIMIT = 31;
+    private static final int TOP_LIMIT = 42, MIDDLE_LIMIT = 38, BOTTOM_LIMIT = 31, SKIN_LIMIT = 4;
 
     // Arrays of Drawables for each section
+    private int[] skinList = new int[]{R.drawable.body01, R.drawable.body02, R.drawable.body03, R.drawable.body04};
     private int[] topList = new int[]{R.drawable.ballc01, R.drawable.ballc02, R.drawable.ballc03, R.drawable.ballc04,
             R.drawable.ballc05, R.drawable.ballc06, R.drawable.ballc07, R.drawable.beanie01, R.drawable.beanie02,
             R.drawable.beanie03, R.drawable.beanie04, R.drawable.beanie05, R.drawable.beanie06, R.drawable.beanie07,
@@ -53,7 +57,7 @@ public class StartActivity extends AppCompatActivity {
             R.drawable.skirt04, R.drawable.skirt05, R.drawable.tights01, R.drawable.tights02, R.drawable.tights03,
             R.drawable.tights04, R.drawable.tights05};
 
-    private int top = 0, middle = 0, bottom = 0;
+    private int top = 0, middle = 0, bottom = 0, skin = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -84,9 +88,8 @@ public class StartActivity extends AppCompatActivity {
                     _topImage.setImageResource(topList[topList.length - 1]);
                     top = topList.length - 1;
                 } else {
-                    top--;
                     _topImage.setImageResource(topList[top - 1]);
-
+                    top--;
                 }
             }
         });
@@ -116,9 +119,8 @@ public class StartActivity extends AppCompatActivity {
                     _middleImage.setImageResource(middleList[middleList.length - 1]);
                     middle = middleList.length - 1;
                 } else {
-                    middle--;
                     _middleImage.setImageResource(middleList[middle - 1]);
-
+                    middle--;
                 }
             }
         });
@@ -144,9 +146,8 @@ public class StartActivity extends AppCompatActivity {
                     _bottomImage.setImageResource(bottomList[bottomList.length - 1]);
                     bottom = bottomList.length - 1;
                 } else {
-                    bottom--;
                     _bottomImage.setImageResource(bottomList[bottom - 1]);
-
+                    bottom--;
                 }
             }
         });

@@ -9,6 +9,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 import java.io.ByteArrayOutputStream;
 import java.io.File;
@@ -26,6 +27,8 @@ public class FinishActivity extends AppCompatActivity {
 
     private Button _saveImageButton;
     private Button _resetButton;
+
+    private TextView _saveCompleteText;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -46,6 +49,9 @@ public class FinishActivity extends AppCompatActivity {
         this._saveImageButton = (Button) findViewById(R.id.saveImageButton);
         this._resetButton = (Button) findViewById(R.id.resetButton);
 
+        // TextView init
+        this._saveCompleteText = (TextView) findViewById(R.id.saveCompleteTextView);
+
         _topImageFinished.setImageResource(pieceReceived[0]);
         _middleImageFinish.setImageResource(pieceReceived[1]);
         _bottomImageFinish.setImageResource(pieceReceived[2]);
@@ -55,7 +61,9 @@ public class FinishActivity extends AppCompatActivity {
             public void onClick(View view) {
                 _saveImageButton.setVisibility(View.INVISIBLE);
                 _resetButton.setVisibility(View.INVISIBLE);
+                //Grab timestamp for unique picture filename
                 String timeStamp = new SimpleDateFormat("yyyyMMdd_HHmmss").format(new Date());
+                // Take screenshot of device screen, now that buttons are invisible
                 Bitmap screenShot;
                 View screenShotView = findViewById(R.id.finishRelativeLayout);// get ur root view id
                 screenShotView.setDrawingCacheEnabled(true);
@@ -64,7 +72,7 @@ public class FinishActivity extends AppCompatActivity {
 
                 ByteArrayOutputStream bytes = new ByteArrayOutputStream();
                 screenShot.compress(Bitmap.CompressFormat.JPEG, 100, bytes);
-                // Storing in
+                // Storing in Pictures directory
                 File f = new File(Environment.getExternalStorageDirectory() + "/Pictures"
                         + File.separator + timeStamp + "_dollify.jpg");
                 try {
@@ -85,13 +93,19 @@ public class FinishActivity extends AppCompatActivity {
                     e.printStackTrace();
                 }
 
-                try {
-                    MediaStore.Images.Media.insertImage(getContentResolver(), Environment.getExternalStorageDirectory() +
-                            File.separator + "Pictures"
-                            + File.separator + timeStamp + "_dollify.jpg", timeStamp + "_dollify.jpg", timeStamp + "_dollify.jpg");
-                } catch (FileNotFoundException e) {
-                    e.printStackTrace();
-                }
+                _resetButton.setVisibility(View.VISIBLE);
+                _saveCompleteText.setVisibility(View.VISIBLE);
+
+                // This will be implemented later, gallery integration
+
+                /**try {
+                 MediaStore.Images.Media.insertImage(getContentResolver(), Environment.getExternalStorageDirectory() +
+                 File.separator + "Pictures"
+                 + File.separator + timeStamp + "_dollify.jpg", timeStamp + "_dollify.jpg", timeStamp + "_dollify.jpg");
+                 } catch (FileNotFoundException e) {
+                 e.printStackTrace();
+                 }**/
+
 
             }
         });
