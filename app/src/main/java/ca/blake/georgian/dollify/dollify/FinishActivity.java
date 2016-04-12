@@ -24,6 +24,7 @@ public class FinishActivity extends AppCompatActivity {
     private ImageView _topImageFinished;
     private ImageView _middleImageFinish;
     private ImageView _bottomImageFinish;
+    private ImageView _bodyImageFinish;
 
     private Button _saveImageButton;
     private Button _resetButton;
@@ -44,6 +45,7 @@ public class FinishActivity extends AppCompatActivity {
         this._topImageFinished = (ImageView) findViewById(R.id.topImageFinish);
         this._middleImageFinish = (ImageView) findViewById(R.id.middleImageFinish);
         this._bottomImageFinish = (ImageView) findViewById(R.id.bottomImageFinish);
+        this._bodyImageFinish = (ImageView) findViewById(R.id.bodyImageView);
 
         // Button init
         this._saveImageButton = (Button) findViewById(R.id.saveImageButton);
@@ -55,6 +57,7 @@ public class FinishActivity extends AppCompatActivity {
         _topImageFinished.setImageResource(pieceReceived[0]);
         _middleImageFinish.setImageResource(pieceReceived[1]);
         _bottomImageFinish.setImageResource(pieceReceived[2]);
+        _bodyImageFinish.setImageResource(pieceReceived[3]);
 
         _saveImageButton.setOnClickListener(new View.OnClickListener() {
             @Override

@@ -68,17 +68,24 @@ public class StartActivity extends AppCompatActivity {
         this._leftButton01 = (Button) findViewById(R.id.leftArrowButton1);
         this._leftButton02 = (Button) findViewById(R.id.leftArrowButton2);
         this._leftButton03 = (Button) findViewById(R.id.leftArrowButton3);
+        this._leftButton04 = (Button) findViewById(R.id.leftArrowButton4);
         this._rightButton01 = (Button) findViewById(R.id.rightArrowButton1);
         this._rightButton02 = (Button) findViewById(R.id.rightArrowButton2);
         this._rightButton03 = (Button) findViewById(R.id.rightArrowButton3);
+        this._rightButton04 = (Button) findViewById(R.id.rightArrowButton4);
         this._nextButton = (Button) findViewById(R.id.nextButton);
 
+        // Create references for ImageViews
         this._topImage = (ImageView) findViewById(R.id.topImageFinish);
         this._middleImage = (ImageView) findViewById(R.id.middleImageFinish);
         this._bottomImage = (ImageView) findViewById(R.id.bottomImageFinish);
+        this._bodyImage = (ImageView) findViewById(R.id.bodyImageView);
+
+        // Set default ImageResource
         _topImage.setImageResource(topList[0]);
         _middleImage.setImageResource(middleList[0]);
         _bottomImage.setImageResource(bottomList[0]);
+        _bodyImage.setImageResource(skinList[0]);
 
 
         _leftButton01.setOnClickListener(new View.OnClickListener() {
@@ -166,6 +173,33 @@ public class StartActivity extends AppCompatActivity {
             }
         });
 
+        _leftButton04.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if (skin == 0) {
+                    _bodyImage.setImageResource(skinList[skinList.length - 1]);
+                    skin = skinList.length - 1;
+                } else {
+                    _bodyImage.setImageResource(skinList[skin - 1]);
+                    skin--;
+                }
+            }
+        });
+
+        _rightButton04.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if (skin == SKIN_LIMIT - 1) {
+                    _bodyImage.setImageResource(skinList[0]);
+                    skin = 0;
+                } else {
+                    skin++;
+                    _bodyImage.setImageResource(skinList[skin]);
+
+                }
+            }
+        });
+
         _nextButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -184,7 +218,7 @@ public class StartActivity extends AppCompatActivity {
     }
 
     public void OpenFinishScreen() {
-        int[] set = new int[] {topList[top], middleList[middle], bottomList[bottom]};
+        int[] set = new int[] {topList[top], middleList[middle], bottomList[bottom], skinList[skin]};
         Intent openFinishIntent = new Intent(StartActivity.this, FinishActivity.class);
         openFinishIntent.putExtra("PIECES", set);
         startActivity(openFinishIntent);

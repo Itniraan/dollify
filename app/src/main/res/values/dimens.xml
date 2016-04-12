@@ -17,4 +17,5 @@
     <dimen name="leftMargin">30dp</dimen>
     <dimen name="instructionTextTopMargin">25dp</dimen>
     <dimen name="aboutUsTextSize">30sp</dimen>
+    <dimen name="topMarginSkinColour">20dp</dimen>
 </resources>
