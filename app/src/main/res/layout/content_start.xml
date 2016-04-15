@@ -11,43 +11,16 @@
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context="ca.blake.georgian.dollify.dollify.StartActivity"
     tools:showIn="@layout/activity_start"
-    android:id="@+id/startRelativeLayout">
-
-    <Button
-        android:layout_width="@dimen/buttonStartWidth"
-        android:layout_height="@dimen/buttonStartHeight"
-        android:text="@string/rightArrowButtonText"
-        android:id="@+id/rightArrowButton4"
-        android:layout_marginLeft="@dimen/leftMargin"
-        android:layout_alignParentEnd="true"
-        android:layout_marginTop="@dimen/topMarginSkinColour" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/skinColourText"
-        android:id="@+id/skinTextView"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="35dp"
-        android:textSize="25sp" />
-
-    <Button
-        android:layout_width="@dimen/buttonStartWidth"
-        android:layout_height="@dimen/buttonStartHeight"
-        android:text="@string/leftArrowButtonText"
-        android:id="@+id/leftArrowButton4"
-        android:singleLine="false"
-        android:layout_alignEnd="@+id/leftArrowButton1"
-        android:layout_alignParentEnd="false"
-        android:layout_alignParentStart="true"
-        android:layout_marginTop="@dimen/topMarginSkinColour" />
+    android:id="@+id/startRelativeLayout"
+    android:background="@color/backgroundColour">
 
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_above="@+id/bodyImageView"
         android:layout_alignParentStart="true"
-        android:id="@+id/bodyBackgroundFrameLayout">
+        android:id="@+id/bodyBackgroundFrameLayout"
+        android:clickable="true">
 
         <ImageView
             android:layout_width="@dimen/imageWidth"
@@ -64,11 +37,40 @@
     <Button
         android:layout_width="@dimen/buttonStartWidth"
         android:layout_height="@dimen/buttonStartHeight"
-        android:text="@string/leftArrowButtonText"
+        android:id="@+id/rightArrowButton4"
+        android:layout_marginLeft="@dimen/leftMargin"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="@dimen/topMarginSkinColour"
+        android:text="@string/rightArrowButtonText" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/skinColourText"
+        android:id="@+id/skinTextView"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="35dp"
+        android:textSize="25sp" />
+
+    <Button
+        android:layout_width="@dimen/buttonStartWidth"
+        android:layout_height="@dimen/buttonStartHeight"
+        android:id="@+id/leftArrowButton4"
+        android:singleLine="false"
+        android:layout_alignEnd="@+id/leftArrowButton1"
+        android:layout_alignParentEnd="false"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="@dimen/topMarginSkinColour"
+        android:text="@string/leftArrowButtonText" />
+
+    <Button
+        android:layout_width="@dimen/buttonStartWidth"
+        android:layout_height="@dimen/buttonStartHeight"
         android:id="@+id/leftArrowButton1"
         android:singleLine="false"
         android:layout_above="@+id/leftArrowButton2"
-        android:layout_marginBottom="39dp" />
+        android:layout_marginBottom="39dp"
+        android:text="@string/leftArrowButtonText" />
 
     <ImageView
         android:layout_width="@dimen/imageWidth"
@@ -82,18 +84,18 @@
     <Button
         android:layout_width="@dimen/buttonStartWidth"
         android:layout_height="@dimen/buttonStartHeight"
-        android:text="@string/rightArrowButtonText"
         android:id="@+id/rightArrowButton1"
         android:layout_alignTop="@+id/leftArrowButton1"
         android:layout_alignStart="@id/nextButton"
-        android:layout_marginLeft="@dimen/leftMargin" />
+        android:layout_marginLeft="@dimen/leftMargin"
+        android:text="@string/rightArrowButtonText" />
 
     <Button
         android:layout_width="@dimen/buttonStartWidth"
         android:layout_height="@dimen/buttonStartHeight"
-        android:text="@string/leftArrowButtonText"
         android:id="@+id/leftArrowButton2"
-        android:layout_alignTop="@+id/rightArrowButton2" />
+        android:layout_alignTop="@+id/rightArrowButton2"
+        android:text="@string/leftArrowButtonText" />
 
     <ImageView
         android:layout_width="@dimen/imageWidth"
@@ -107,18 +109,18 @@
     <Button
         android:layout_width="@dimen/buttonStartWidth"
         android:layout_height="@dimen/buttonStartHeight"
-        android:text="@string/rightArrowButtonText"
         android:id="@+id/rightArrowButton2"
         android:layout_above="@+id/rightArrowButton3"
         android:layout_alignStart="@id/nextButton"
-        android:layout_marginLeft="@dimen/leftMargin" />
+        android:layout_marginLeft="@dimen/leftMargin"
+        android:text="@string/rightArrowButtonText" />
 
     <Button
         android:layout_width="@dimen/buttonStartWidth"
         android:layout_height="@dimen/buttonStartHeight"
-        android:text="@string/leftArrowButtonText"
         android:id="@+id/leftArrowButton3"
-        android:layout_alignTop="@+id/rightArrowButton3" />
+        android:layout_alignTop="@+id/rightArrowButton3"
+        android:text="@string/leftArrowButtonText" />
 
     <ImageView
         android:layout_width="@dimen/imageWidth"
@@ -132,13 +134,13 @@
     <Button
         android:layout_width="@dimen/buttonStartWidth"
         android:layout_height="@dimen/buttonStartHeight"
-        android:text="@string/rightArrowButtonText"
         android:id="@+id/rightArrowButton3"
         android:layout_gravity="right|center_vertical"
         android:layout_marginBottom="52dp"
         android:layout_alignBottom="@+id/topImageFinish"
         android:layout_alignStart="@+id/nextButton"
-        android:layout_marginLeft="@dimen/leftMargin" />
+        android:layout_marginLeft="@dimen/leftMargin"
+        android:text="@string/rightArrowButtonText" />
 
     <Button
         android:layout_width="wrap_content"

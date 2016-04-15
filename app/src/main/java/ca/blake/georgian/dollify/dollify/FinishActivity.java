@@ -62,10 +62,13 @@ public class FinishActivity extends AppCompatActivity {
         _saveImageButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                // Make the buttons on screen invisible
                 _saveImageButton.setVisibility(View.INVISIBLE);
                 _resetButton.setVisibility(View.INVISIBLE);
+
                 //Grab timestamp for unique picture filename
                 String timeStamp = new SimpleDateFormat("yyyyMMdd_HHmmss").format(new Date());
+
                 // Take screenshot of device screen, now that buttons are invisible
                 Bitmap screenShot;
                 View screenShotView = findViewById(R.id.finishRelativeLayout);// get ur root view id
@@ -75,9 +78,16 @@ public class FinishActivity extends AppCompatActivity {
 
                 ByteArrayOutputStream bytes = new ByteArrayOutputStream();
                 screenShot.compress(Bitmap.CompressFormat.JPEG, 100, bytes);
-                // Storing in Pictures directory
-                File f = new File(Environment.getExternalStorageDirectory() + "/Pictures"
-                        + File.separator + timeStamp + "_dollify.jpg");
+
+                // Create a Dollify directory in Pictures, if it doesn't exist yet
+                File dollifyDir = new File(Environment.getExternalStorageDirectory() + "/Pictures/Dollify");
+
+                if (!dollifyDir.exists()) {
+                    dollifyDir.mkdir();
+                }
+
+                // Storing in Pictures/Dollify directory
+                File f = new File(dollifyDir + File.separator + timeStamp + "_dollify.jpg");
                 try {
                     f.createNewFile();
                 } catch (IOException e) {
@@ -99,15 +109,6 @@ public class FinishActivity extends AppCompatActivity {
                 _resetButton.setVisibility(View.VISIBLE);
                 _saveCompleteText.setVisibility(View.VISIBLE);
 
-                // This will be implemented later, gallery integration
-
-                /**try {
-                 MediaStore.Images.Media.insertImage(getContentResolver(), Environment.getExternalStorageDirectory() +
-                 File.separator + "Pictures"
-                 + File.separator + timeStamp + "_dollify.jpg", timeStamp + "_dollify.jpg", timeStamp + "_dollify.jpg");
-                 } catch (FileNotFoundException e) {
-                 e.printStackTrace();
-                 }**/
 
 
             }

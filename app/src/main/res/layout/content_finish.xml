@@ -11,7 +11,8 @@
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context="ca.blake.georgian.dollify.dollify.FinishActivity"
     tools:showIn="@layout/activity_finish"
-    android:id="@+id/finishRelativeLayout">
+    android:id="@+id/finishRelativeLayout"
+    android:background="@color/backgroundColour">
 
     <TextView
         android:layout_width="wrap_content"
@@ -35,7 +36,6 @@
             android:layout_width="@dimen/imageWidth"
             android:layout_height="wrap_content"
             android:id="@+id/bodyImageView"
-            android:src="@drawable/body02"
             android:scaleType="matrix"
             android:layout_gravity="center" />
     </FrameLayout>

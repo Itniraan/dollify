@@ -25,7 +25,7 @@
     <string name="resetButtonText">RESET</string>
     <string name="title_activity_option">OptionActivity</string>
     <string name="optionsTitleText">Options</string>
-    <string name="aboutUsButtonText">About Us</string>
+    <string name="aboutUsButtonText">Credits</string>
     <string name="title_activity_about_us">AboutUsActivity</string>
     <string name="aboutUsTitleText">Credits</string>
     <string name="aboutUsDescriptionText">By Blake Murdock, Kelly McAlpine, and Jacqueline Richard</string>

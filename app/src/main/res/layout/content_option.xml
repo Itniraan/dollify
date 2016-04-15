@@ -11,7 +11,8 @@
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context="ca.blake.georgian.dollify.dollify.OptionActivity"
     tools:showIn="@layout/activity_option"
-    android:id="@+id/optionRelativeLayout">
+    android:id="@+id/optionRelativeLayout"
+    android:background="@color/backgroundColour">
 
     <TextView
         android:layout_width="wrap_content"

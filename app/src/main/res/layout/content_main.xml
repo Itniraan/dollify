@@ -11,7 +11,8 @@
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context="ca.blake.georgian.dollify.dollify.MainActivity"
     tools:showIn="@layout/activity_main"
-    android:id="@+id/mainMenuRelativeLayout">
+    android:id="@+id/mainMenuRelativeLayout"
+    android:background="@color/backgroundColour">
 
     <ImageView
         android:layout_width="wrap_content"
@@ -35,10 +36,10 @@
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/startButtonText"
         android:id="@+id/startButton"
         android:textSize="@dimen/buttonTextSize"
         android:layout_centerVertical="true"
-        android:layout_centerHorizontal="true" />
+        android:layout_centerHorizontal="true"
+        android:text="@string/startButtonText" />
 
 </RelativeLayout>
