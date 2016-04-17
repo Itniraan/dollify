@@ -82,21 +82,29 @@ public class StartActivity extends AppCompatActivity {
         this._bodyImage = (ImageView) findViewById(R.id.bodyImageView);
 
         // Set default ImageResource
-        _topImage.setImageResource(topList[0]);
-        _middleImage.setImageResource(middleList[0]);
-        _bottomImage.setImageResource(bottomList[0]);
-        _bodyImage.setImageResource(skinList[0]);
+        try {
+            _topImage.setImageResource(topList[0]);
+            _middleImage.setImageResource(middleList[0]);
+            _bottomImage.setImageResource(bottomList[0]);
+            _bodyImage.setImageResource(skinList[0]);
+        } catch (ArrayIndexOutOfBoundsException e) {
+            e.printStackTrace();
+        }
 
 
         _leftButton01.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if (top == 0) {
-                    _topImage.setImageResource(topList[topList.length - 1]);
-                    top = topList.length - 1;
-                } else {
-                    _topImage.setImageResource(topList[top - 1]);
-                    top--;
+                try {
+                    if (top == 0) {
+                        _topImage.setImageResource(topList[topList.length - 1]);
+                        top = topList.length - 1;
+                    } else {
+                        _topImage.setImageResource(topList[top - 1]);
+                        top--;
+                    }
+                } catch (ArrayIndexOutOfBoundsException e) {
+                    e.printStackTrace();
                 }
             }
         });
@@ -104,17 +112,21 @@ public class StartActivity extends AppCompatActivity {
         _rightButton01.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if (top == TOP_LIMIT - 1) {
-                    _topImage.setImageResource(topList[0]);
-                    top = 0;
-                    System.out.println(top);
-                } else {
-                    if (top == 0) {
-                        top = 1;
-                    }
-                    top++;
-                    _topImage.setImageResource(topList[top]);
+                try {
+                    if (top == TOP_LIMIT - 1) {
+                        _topImage.setImageResource(topList[0]);
+                        top = 0;
+                        System.out.println(top);
+                    } else {
+                        if (top == 0) {
+                            top = 1;
+                        }
+                        top++;
+                        _topImage.setImageResource(topList[top]);
 
+                    }
+                } catch (ArrayIndexOutOfBoundsException e) {
+                    e.printStackTrace();
                 }
             }
         });
@@ -122,12 +134,16 @@ public class StartActivity extends AppCompatActivity {
         _leftButton02.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if (middle == 0) {
-                    _middleImage.setImageResource(middleList[middleList.length - 1]);
-                    middle = middleList.length - 1;
-                } else {
-                    _middleImage.setImageResource(middleList[middle - 1]);
-                    middle--;
+                try {
+                    if (middle == 0) {
+                        _middleImage.setImageResource(middleList[middleList.length - 1]);
+                        middle = middleList.length - 1;
+                    } else {
+                        _middleImage.setImageResource(middleList[middle - 1]);
+                        middle--;
+                    }
+                } catch (ArrayIndexOutOfBoundsException e) {
+                    e.printStackTrace();
                 }
             }
         });
@@ -135,13 +151,17 @@ public class StartActivity extends AppCompatActivity {
         _rightButton02.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if (middle == MIDDLE_LIMIT - 1) {
-                    _middleImage.setImageResource(middleList[0]);
-                    middle = 0;
-                } else {
-                    middle++;
-                    _middleImage.setImageResource(middleList[middle]);
+                try {
+                    if (middle == MIDDLE_LIMIT - 1) {
+                        _middleImage.setImageResource(middleList[0]);
+                        middle = 0;
+                    } else {
+                        middle++;
+                        _middleImage.setImageResource(middleList[middle]);
 
+                    }
+                } catch (ArrayIndexOutOfBoundsException e) {
+                    e.printStackTrace();
                 }
             }
         });
@@ -149,12 +169,16 @@ public class StartActivity extends AppCompatActivity {
         _leftButton03.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if (bottom == 0) {
-                    _bottomImage.setImageResource(bottomList[bottomList.length - 1]);
-                    bottom = bottomList.length - 1;
-                } else {
-                    _bottomImage.setImageResource(bottomList[bottom - 1]);
-                    bottom--;
+                try {
+                    if (bottom == 0) {
+                        _bottomImage.setImageResource(bottomList[bottomList.length - 1]);
+                        bottom = bottomList.length - 1;
+                    } else {
+                        _bottomImage.setImageResource(bottomList[bottom - 1]);
+                        bottom--;
+                    }
+                } catch (ArrayIndexOutOfBoundsException e) {
+                    e.printStackTrace();
                 }
             }
         });
@@ -162,13 +186,17 @@ public class StartActivity extends AppCompatActivity {
         _rightButton03.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if (bottom == BOTTOM_LIMIT - 1) {
-                    _bottomImage.setImageResource(bottomList[0]);
-                    bottom = 0;
-                } else {
-                    bottom++;
-                    _bottomImage.setImageResource(bottomList[bottom]);
+                try {
+                    if (bottom == BOTTOM_LIMIT - 1) {
+                        _bottomImage.setImageResource(bottomList[0]);
+                        bottom = 0;
+                    } else {
+                        bottom++;
+                        _bottomImage.setImageResource(bottomList[bottom]);
 
+                    }
+                } catch (ArrayIndexOutOfBoundsException e) {
+                    e.printStackTrace();
                 }
             }
         });
@@ -176,12 +204,16 @@ public class StartActivity extends AppCompatActivity {
         _leftButton04.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if (skin == 0) {
-                    _bodyImage.setImageResource(skinList[skinList.length - 1]);
-                    skin = skinList.length - 1;
-                } else {
-                    _bodyImage.setImageResource(skinList[skin - 1]);
-                    skin--;
+                try {
+                    if (skin == 0) {
+                        _bodyImage.setImageResource(skinList[skinList.length - 1]);
+                        skin = skinList.length - 1;
+                    } else {
+                        _bodyImage.setImageResource(skinList[skin - 1]);
+                        skin--;
+                    }
+                } catch (ArrayIndexOutOfBoundsException e) {
+                    e.printStackTrace();
                 }
             }
         });
@@ -189,13 +221,17 @@ public class StartActivity extends AppCompatActivity {
         _rightButton04.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if (skin == SKIN_LIMIT - 1) {
-                    _bodyImage.setImageResource(skinList[0]);
-                    skin = 0;
-                } else {
-                    skin++;
-                    _bodyImage.setImageResource(skinList[skin]);
+                try {
+                    if (skin == SKIN_LIMIT - 1) {
+                        _bodyImage.setImageResource(skinList[0]);
+                        skin = 0;
+                    } else {
+                        skin++;
+                        _bodyImage.setImageResource(skinList[skin]);
 
+                    }
+                } catch (ArrayIndexOutOfBoundsException e) {
+                    e.printStackTrace();
                 }
             }
         });
