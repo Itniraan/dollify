@@ -53,11 +53,14 @@ public class FinishActivity extends AppCompatActivity {
 
         // TextView init
         this._saveCompleteText = (TextView) findViewById(R.id.saveCompleteTextView);
-
-        _topImageFinished.setImageResource(pieceReceived[0]);
-        _middleImageFinish.setImageResource(pieceReceived[1]);
-        _bottomImageFinish.setImageResource(pieceReceived[2]);
-        _bodyImageFinish.setImageResource(pieceReceived[3]);
+        try {
+            _topImageFinished.setImageResource(pieceReceived[0]);
+            _middleImageFinish.setImageResource(pieceReceived[1]);
+            _bottomImageFinish.setImageResource(pieceReceived[2]);
+            _bodyImageFinish.setImageResource(pieceReceived[3]);
+        } catch (ArrayIndexOutOfBoundsException e) {
+            e.printStackTrace();
+        }
 
         _saveImageButton.setOnClickListener(new View.OnClickListener() {
             @Override
