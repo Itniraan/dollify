@@ -65,21 +65,21 @@
         android:layout_centerHorizontal="true" />
 
     <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/saveImageButtonText"
+        android:layout_width="@dimen/button_width"
+        android:layout_height="@dimen/button_height"
         android:id="@+id/saveImageButton"
         android:layout_alignParentTop="false"
         android:layout_alignParentStart="true"
-        android:layout_alignParentBottom="true" />
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/savebutton1" />
 
     <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/resetButtonText"
+        android:layout_width="@dimen/button_width"
+        android:layout_height="@dimen/button_height"
         android:id="@+id/resetButton"
         android:layout_alignParentTop="false"
         android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true" />
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/resetbutton1" />
 
 </RelativeLayout>
