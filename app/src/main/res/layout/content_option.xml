@@ -14,15 +14,15 @@
     android:id="@+id/optionRelativeLayout"
     android:background="@color/backgroundColour">
 
-    <TextView
+    <ImageView
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/optionsTitleText"
-        android:id="@+id/optionTitleTextView"
+        android:layout_height="100dp"
+        android:id="@+id/optionTitleImageView"
         android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="58dp"
-        android:textSize="@dimen/titleTextSize" />
+        android:layout_alignParentStart="false"
+        android:src="@drawable/options"
+        android:layout_marginTop="20dp"
+        android:layout_centerHorizontal="true" />
 
     <Button
         android:layout_width="@dimen/button_width"
@@ -37,10 +37,10 @@
         android:layout_width="@dimen/button_width"
         android:layout_height="@dimen/button_height"
         android:id="@+id/optionsInstructionsButton"
-        android:layout_below="@+id/optionTitleTextView"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="81dp"
-        android:background="@drawable/instructions_button1" />
+        android:background="@drawable/instructions_button1"
+        android:layout_below="@+id/optionTitleImageView"
+        android:layout_marginTop="70dp" />
 
     <Button
         android:layout_width="@dimen/button_width"
@@ -50,4 +50,5 @@
         android:layout_below="@+id/optionsInstructionsButton"
         android:layout_centerHorizontal="true"
         android:background="@drawable/creditsbutton1" />
+
 </RelativeLayout>
