@@ -23,7 +23,8 @@
         android:layout_marginTop="40dp"
         android:visibility="invisible"
         android:textSize="20sp"
-        android:textAlignment="center" />
+        android:textAlignment="center"
+        android:textColor="#6b5270" />
 
     <FrameLayout
         android:layout_width="match_parent"
