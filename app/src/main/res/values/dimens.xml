@@ -15,7 +15,7 @@
     <dimen name="imageWidth">230dp</dimen>
     <dimen name="buttonTopMargin">20dp</dimen>
     <dimen name="leftMargin">30dp</dimen>
-    <dimen name="instructionTextTopMargin">15dp</dimen>
+    <dimen name="instructionTextTopMargin">20dp</dimen>
     <dimen name="aboutUsTextSize">30sp</dimen>
     <dimen name="topMarginSkinColour">20dp</dimen>
     <dimen name="button_width">150dp</dimen>

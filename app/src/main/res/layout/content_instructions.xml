@@ -48,25 +48,14 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/instructionText03"
-        android:id="@+id/instructionTextView3"
-        android:textSize="@dimen/instructionsTextSize"
-        android:layout_marginTop="@dimen/instructionTextTopMargin"
-        android:layout_below="@+id/instructionTextView2"
-        android:layout_alignParentStart="true"
-        android:textColor="#6b5270" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
         android:text="@string/instructionText04"
         android:id="@+id/instructionTextView4"
-        android:layout_below="@+id/instructionTextView3"
         android:layout_centerHorizontal="true"
         android:textSize="@dimen/instructionsTextSize"
         android:layout_marginTop="@dimen/instructionTextTopMargin"
         android:layout_alignParentStart="true"
-        android:textColor="#6b5270" />
+        android:textColor="#6b5270"
+        android:layout_below="@+id/instructionTextView2" />
 
     <TextView
         android:layout_width="wrap_content"
